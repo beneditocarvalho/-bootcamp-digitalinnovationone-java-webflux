@@ -10,9 +10,6 @@
         <module name="stock-quotes-api" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="stock-quotes-api" target="11" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
