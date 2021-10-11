@@ -1,1 +1,2 @@
 [1009/224627.191:ERROR:settings.cc(266)] Settings version is not 1
+[1011/202523.721:ERROR:main_dll_loader_win.cc(136)] Failed to load Chrome DLL from C:\Program Files (x86)\Bookness\Application\58.0.3029.81\chrome.dll: Não foi possível encontrar o módulo especificado. (0x7E)
