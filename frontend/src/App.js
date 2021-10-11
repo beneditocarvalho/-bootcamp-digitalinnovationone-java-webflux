@@ -1,7 +1,9 @@
+import LineChart from './LineChart';
+
 function App() {
   return (
     <div>
-      Gráfico
+      <LineChart/>
     </div>
   );
 }

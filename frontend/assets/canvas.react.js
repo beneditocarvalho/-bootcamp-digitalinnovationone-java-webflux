@@ -40,7 +40,16 @@ class CanvasJSChart extends Component {
     }
 
     render() {
-        return <div id={this.chartContainerId} style={this.containerProps} />
+        return (
+        <div id={this.chartContainerId} style={this.containerProps} />
+        );
 	}
 
 }
+
+var CanvasJSReact = {
+    CanvasJSChart: CanvasJSChart,
+    CanvasJS: CanvasJS
+}
+
+export default CanvasJSReact;
