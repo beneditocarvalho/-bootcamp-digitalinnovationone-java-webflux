@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/backend/stock-quotes-api.iml" filepath="$PROJECT_DIR$/backend/stock-quotes-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/backend/stock-quotes-api (1).iml" filepath="$PROJECT_DIR$/backend/stock-quotes-api (1).iml" />
+      <module fileurl="file://$PROJECT_DIR$/stock-quotes-api (2).iml" filepath="$PROJECT_DIR$/stock-quotes-api (2).iml" />
     </modules>
   </component>
 </project>

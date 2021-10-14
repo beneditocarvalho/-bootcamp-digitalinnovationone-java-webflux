@@ -4,14 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f3196832-c5cc-4e06-b12f-ef7dd236c0df" name="Changes" comment="Criado pasta backend / frontend">
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+    <list default="true" id="f3196832-c5cc-4e06-b12f-ef7dd236c0df" name="Changes" comment="Criado QuoteGenerator">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_6_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/dbnavigator.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/digitalinnovation/one/stockquotesapi/Quote.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/digitalinnovation/one/stockquotesapi/QuoteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/digitalinnovation/one/stockquotesapi/StockQuotesApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/digitalinnovation/one/stockquotesapi/StockQuotesApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/stock-quotes-api.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/digitalinnovation/one/stockquotesapi/Quote$QuoteBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/digitalinnovation/one/stockquotesapi/Quote.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/digitalinnovation/one/stockquotesapi/QuoteRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/classes/com/digitalinnovation/one/stockquotesapi/StockQuotesApiApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/target/test-classes/com/digitalinnovation/one/stockquotesapi/StockQuotesApiApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -19,16 +48,30 @@
   <component name="JpbToolWindowState">
     <option name="myId2FirstActivated">
       <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
         <entry key="JPA Structure" value="true" />
       </map>
     </option>
     <option name="myId2Visible">
       <map>
+        <entry key="JPA Inspector" value="false" />
+        <entry key="JPA Palette" value="false" />
         <entry key="JPA Structure" value="false" />
       </map>
     </option>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1zIFcpiNLxsSPtZRyBD8LXtEFRD" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,6 +81,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RunManager">
     <configuration name="StockQuotesApiApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -75,7 +119,56 @@
       <option name="project" value="LOCAL" />
       <updated>1633828204588</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adicionado configuração do Banco Dados H2">
+      <created>1634153791796</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1634153791796</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Criado DatabaseConfig para popular o banco de dados">
+      <created>1634154295574</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1634154295574</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Alterado formata de data para o timestamp">
+      <created>1634156288920</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1634156288920</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Alterado formato da data na propriedade timestamp">
+      <created>1634156383823</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1634156383823</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Alterado formato da data no atributo timestamp">
+      <created>1634156548024</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1634156548024</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Alterada interface QuoteRepository">
+      <created>1634156791523</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1634156791523</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Criado QuoteGenerator">
+      <created>1634156940082</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1634156940082</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -189,6 +282,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Criado pasta backend / frontend" />
-    <option name="LAST_COMMIT_MESSAGE" value="Criado pasta backend / frontend" />
+    <MESSAGE value="Adicionado configuração do Banco Dados H2" />
+    <MESSAGE value="Criado DatabaseConfig para popular o banco de dados" />
+    <MESSAGE value="Alterado formata de data para o timestamp" />
+    <MESSAGE value="Alterado formato da data na propriedade timestamp" />
+    <MESSAGE value="Alterado formato da data no atributo timestamp" />
+    <MESSAGE value="Alterada interface QuoteRepository" />
+    <MESSAGE value="Criado QuoteGenerator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criado QuoteGenerator" />
   </component>
 </project>
