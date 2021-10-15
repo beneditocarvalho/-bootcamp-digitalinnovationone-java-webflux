@@ -21,4 +21,11 @@ public class QuoteHandler {
                 .body(quotes, Quote.class);
     }
 
+    public Mono<ServerResponse> getLastQuote(ServerRequest req) {
+        Mono<Quote> quote = repository.findAll().last();
+        return ServerResponse
+                .ok()
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(quote, Quote.class);
+    }
 }

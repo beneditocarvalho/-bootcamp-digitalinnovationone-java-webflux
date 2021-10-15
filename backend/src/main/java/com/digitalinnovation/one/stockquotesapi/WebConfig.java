@@ -15,6 +15,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 public class WebConfig implements WebFluxConfigurer {
     @Bean
     public RouterFunction<ServerResponse> routeQuotes(QuoteHandler quoteHandler) {
-        return route(GET("/quotes"), quoteHandler::getAll);
+        return route(GET("/quotes"), quoteHandler::getAll)
+                .andRoute(GET("/last-quote"), quoteHandler::getLastQuote);
     }
 }
