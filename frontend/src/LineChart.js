@@ -1,22 +1,10 @@
 import React, { Component } from 'react';
 import CanvasJSReact from './assets/canvas.react';
+import { getChart } from './services/api';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
-var openValues = [{
-    x: 0.222,
-    y: new Date()
-},{
-    x: 0.221,
-    y: new Date()
-}];
-
-var closeValues = [{
-    x: 0.122,
-    y: new Date()
-},{
-    x: 0.121,
-    y: new Date()
-}];
+var openValues = [];
+var closeValues = [];
 
 class LineChart extends Component{
     constructor(){
@@ -28,7 +16,26 @@ class LineChart extends Component{
         setInterval(this.updateChart, 1000);
     }
 
-    updateChart(){
+    async fetchData() { 
+        const result = await getChart();
+        const data = result.data;
+                
+        openValues.push({
+             x: new Date(data.timestamp),
+             y: data.openValue
+        });
+        if(openValues.lenght > 10)
+                openValues.shift();
+                closeValues.push({
+                    x: new Date(data.timestamp),
+                    y: data.closeValue
+                });
+                if (closeValues.lenght > 10)
+                    closeValues.shift();
+    }
+
+   async updateChart(){
+        await this.fetchData();
         this.chart.render();
     }
 
