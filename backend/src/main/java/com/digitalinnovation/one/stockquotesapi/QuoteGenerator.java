@@ -3,13 +3,10 @@ package com.digitalinnovation.one.stockquotesapi;
 import lombok.AllArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.math3.random.RandomDataGenerator;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.ApplicationArguments;
-import org.springframework.boot.ApplicationRunner;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import reactor.core.publisher.Flux;
+import reactor.util.function.Tuples;
 
 import javax.annotation.PostConstruct;
 import java.time.Duration;
@@ -25,19 +22,15 @@ public class QuoteGenerator {
     @PostConstruct
     public void init() {
         Flux.generate(() -> {
-                    log.info("Starting data insertion");
-                    return initialQuote();
+            Quote initialQuote = initialQuote();
+            return Tuples.of(initialQuote, createNewQuote(initialQuote));
                 }, (state, sink) -> {
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    sink.next(state);
-                    return createNewQuote(state);
+                    sink.next(state.getT1());
+                    return Tuples.of(state.getT2(), createNewQuote(state.getT1()));
                 })
                 .delaySubscription(Duration.ofMillis(3000))
-                .subscribe();
+                .delayElements(Duration.ofMillis(1000))
+                .subscribe(log::info);
     }
 
     private Quote createNewQuote(Quote previousQuote) {
